@@ -32,7 +32,8 @@
 export default {
   data () {
     return {
-      post: {}
+      post: {},
+      error: null
     }
   },
 
