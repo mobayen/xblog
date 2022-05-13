@@ -1,7 +1,11 @@
 <template>
   <div>
-    <header class="my-10">
 
+    <div v-if="error" class="bg-red-500 text-white/80 p-2 m-2 rounded">
+      ERROR: {{ error }}
+    </div>
+
+    <header class="my-10">
       <h1 class="text-4xl text-center ">
         {{ post.title }}
       </h1>
@@ -12,7 +16,7 @@
 
     <main>
       <div>
-        {{ post.body}}
+        {{ post.body }}
       </div>
     </main>
 
@@ -37,7 +41,7 @@ export default {
         this.post = json
       }).catch(error => {
         console.log(error)
-        this.error = error
+        this.error = error.message
       })
   }
 }
