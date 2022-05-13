@@ -12,7 +12,12 @@
       </h2>
 
       <nav class="text-right">
-        <router-link :to="{ name: 'post', params: { postId: post.id} }" > Back to post</router-link>
+        <router-link
+          :to="{ name: 'post', params: { postId: post.id} }"
+          class="bg-rose-500 px-6 py-2 rounded text-white hover:bg-opacity-80 m-2"
+        >
+        Back to post
+        </router-link>
       </nav>
     </header>
 
@@ -51,7 +56,7 @@ export default {
   data () {
     return {
       post: {},
-      error: 'fake error'
+      error: null
     }
   },
 
