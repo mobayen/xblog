@@ -11,7 +11,7 @@
       </h1>
       <nav class="text-right">
         <router-link
-          :to="{ name: 'edit', params: { postId: post.id} }"
+          :to="`/post/${post.id}/edit`"
           class="bg-rose-500 px-6 py-2 rounded text-white hover:bg-opacity-80 m-2"
         >
           Edit

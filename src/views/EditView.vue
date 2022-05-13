@@ -13,7 +13,7 @@
 
       <nav class="text-right">
         <router-link
-          :to="{ name: 'post', params: { postId: post.id} }"
+          :to="`/post/${post.id}`"
           class="bg-rose-500 px-6 py-2 rounded text-white hover:bg-opacity-80 m-2"
         >
         Back to post
